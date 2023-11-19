@@ -31,3 +31,32 @@
 // } else {
 //   console.log("НЕ ЗНАЄТЕ? 12");
 // }
+
+
+// ЗАДАЧА 4
+// НАПИШІТЬ ПРОГРАМУ, ЯКА ДОЗВОЛЯТИМЕ ЮЗЕРУ ВВОДИТИ ЧИСЛО
+//  І ВИЗНАЧАТИМЕ ЧИ ЦЕ ПАРНЕ ЧИСЛО, ЧИ НЕ ПАРНЕ.
+
+// const number = Number(prompt("input number"));
+// if (number % 2 === 0) {
+//     console.log("parne chyslo");
+// } else {
+//     console.log("neparne chyslo");
+// }
+
+// ЗАДАЧА 5
+// НАПИШІТЬ ПРОГРАМУ, ЯКА ПРОВІРЯЄ ЛОГІН І ПАРОЛЬ,
+//     І ВИВОДИТЬ ПРИВІТАННЯ - ЯКЩО ВСЕ ДОБРЕ,
+//         АБО ВИДАЄ ПОМИЛКУ, ЩО НЕ ВІРНИЙ ЛОГІН
+
+// const login = "hdgfkjhk";
+// const password = "qwerty";
+// const newLogin = prompt("Input loggin");
+// const newPassword = prompt("Input password");
+// if (newLogin === login && newPassword === password) {
+//     console.log("Welcome");
+// } else {
+//     console.log("Error");
+// }
+// const result = newLogin === login && newPassword === password ? "Welcome" : "Error";
+// console.log(result);
