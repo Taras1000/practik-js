@@ -94,8 +94,8 @@ const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
 addCourse("Express"); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
 addCourse("CSS"); // 'У вас уже є такий курс'
 // removeCourse("React"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
-// removeCourse("Vue"); // 'Курс з таким іменем не найдено'
-// // updateCourse("Express", "NestJS"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+removeCourse("Vue"); // 'Курс з таким іменем не найдено'
+updateCourse("Express", "NestJS"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
 // console.log(courses);
 
 function addCourse(name) {
@@ -105,3 +105,23 @@ function addCourse(name) {
   }
   courses.push(name);
 }
+
+function removeCourse(name) {
+
+  const index = courses.indexOf(name);
+  if (index === - 1) {
+    console.log('Курс з таким іменем не найдено');
+  }
+  courses.splice(index, 1);
+}
+console.log(removeCourse("React"));
+console.log(courses);
+
+function updateCourse(oldName, newName) {
+
+  const updateIndex = courses.indexOf(oldName);
+  courses.splice(updateIndex, 1, newName);
+
+  
+}
+console.log(courses);
