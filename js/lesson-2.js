@@ -71,19 +71,14 @@
 кількість аргументів і повертає їх середнє значення.
 Всі аргументи будуть тільки числовими */
 
-console.log(calculateAverage(1, 2, 3, 4)); // 2.5
-console.log(calculateAverage(14, 8, 2)); // 8
-console.log(calculateAverage(27, 43, 2, 8, 36)); // 23.2
+//
+// Напишіть ф - цію greet(name), яка при виклику буде получати
+// імя(як приклад, "Василь"), і логінувати рядок "Привіт, <імя>".
+// У випадку, відсутнього
+// відсутнього значення, виводе аргумент "Привіт , гість"
+console.log(greet("Василь"));//Привіт Василь
+console.log(greet());//Привіт гість
 
-function calculateAverage() {
-  console.log(arguments);
-  const arrayNew = Array.from(arguments);
-
-  let total = 0;
-
-  for (let array of arrayNew) {
-    total += array;
-  }
-
-  return (total / arrayNew.length).toFixed(2);
+function greet(name = "гість" ) {
+return `Привіт, ${name}`
 }
