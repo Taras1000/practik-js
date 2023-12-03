@@ -13,16 +13,27 @@
 // Классика, Рок-н-ролл
 // Рэп, Регги, Классика, Рок-н-ролл */
 
-const styles = ["Джаз", "Блюз"];
-// console.log(styles.push("Рок-н-ролл"));
-styles.push("Рок-н-ролл");
-console.log(styles);
+// 
+// Напишіть ф - цію logItems(array), яка буде получати масив і 
+// використовуючи цикл for , який для кожного елемента масива буде
+//  виводити в консоль
+// повідомлення у форматі <індекс елемента> та <значення елемента>.
+// Номерація для кожного елемента масива['Mango', 'Poly', 'Ajax'] 
+// з індексом 0 буде виведено 1 - Mango, а для индекса 2 выведет 3 - Ajax.
 
-styles.splice(1, 1, "Классика");
-console.log(styles);
+const users = ['Mango', 'Poly', 'Ajax'];
+function logItems(array) {
+    for (i = 0; i < users.length; i++) {
+        console.log(i,users[i])
+    }
+}
+logItems()
 
-const elementDeleted = styles.shift();
-console.log(elementDeleted);
 
-styles.unshift("Рэп", "Регги");
-console.log(styles);
+
+
+
+
+
+
+
