@@ -76,9 +76,32 @@
 // імя(як приклад, "Василь"), і логінувати рядок "Привіт, <імя>".
 // У випадку, відсутнього
 // відсутнього значення, виводе аргумент "Привіт , гість"
-console.log(greet("Василь"));//Привіт Василь
-console.log(greet());//Привіт гість
+// console.log(greet("Василь"));//Привіт Василь
+// console.log(greet());//Привіт гість
 
-function greet(name = "гість" ) {
-return `Привіт, ${name}`
+// function greet(name = "гість" ) {
+// return `Привіт, ${name}`
+// }
+
+// ЗАДАЧА 7
+// Напишіть функцію для роботи з колекцією навчаючих курсів courses:
+
+// addCourse(name) - добавляє курс у кінець колекції
+// removeCourse(name) - видаляє курс із колекції
+// updateCourse(oldName, newName)- змінює імя на нове
+const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+
+addCourse("Express"); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
+addCourse("CSS"); // 'У вас уже є такий курс'
+// removeCourse("React"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
+// removeCourse("Vue"); // 'Курс з таким іменем не найдено'
+// // updateCourse("Express", "NestJS"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+// console.log(courses);
+
+function addCourse(name) {
+  if (courses.includes(name)) {
+    console.log("У вас уже є такий курс");
+    return;
+  }
+  courses.push(name);
 }
