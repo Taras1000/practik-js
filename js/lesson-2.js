@@ -13,27 +13,39 @@
 // Классика, Рок-н-ролл
 // Рэп, Регги, Классика, Рок-н-ролл */
 
-// 
-// Напишіть ф - цію logItems(array), яка буде получати масив і 
+//
+// Напишіть ф - цію logItems(array), яка буде получати масив і
 // використовуючи цикл for , який для кожного елемента масива буде
 //  виводити в консоль
 // повідомлення у форматі <індекс елемента> та <значення елемента>.
-// Номерація для кожного елемента масива['Mango', 'Poly', 'Ajax'] 
+// Номерація для кожного елемента масива['Mango', 'Poly', 'Ajax']
 // з індексом 0 буде виведено 1 - Mango, а для индекса 2 выведет 3 - Ajax.
 
-const users = ['Mango', 'Poly', 'Ajax'];
-function logItems(array) {
-    for (i = 0; i < users.length; i++) {
-        console.log(i,users[i])
+// const users = ['Mango', 'Poly', 'Ajax'];
+// function logItems(array) {
+//     for (i = 0; i < users.length; i++) {
+//         console.log(i,users[i])
+//     }
+// }
+// logItems()
+
+// ЗАДАЧА 3
+// Напишіть код , який шукає саме найменше число в масиві
+// 1) напишіть циклом for
+// const numbers = [2, 17, 94, 1, 23, 37];
+// 2) перепишіть функцією findSmallestNumber(numbers)
+console.log(findSmallestNumber([2, 17, 94, 1, 23, 37]));
+// console.log(fi
+
+function findSmallestNumber(array) {
+  let x = array[0];
+  for (let i of array) {
+    if (x > i) {
+      x = i;
     }
+  }
+  return x;
+  // return XPathResult;
 }
-logItems()
 
-
-
-
-
-
-
-
-
+console.log(findSmallestNumber([49, 4, 83, 7, 12]));
