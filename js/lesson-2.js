@@ -51,22 +51,39 @@
 
 // console.log(findSmallestNumber([49, 4, 83, 7, 12]));
 
-
 //===================================
-
 
 // ЗАДАЧА 4
 
 //  Провірте , чи являється рядок полідромом
-const str = "ротатор";//true
-const newString = "Hello";//false
+// const str = "ротатор";//true
+// const newString = "Hello";//false
 
+// const newStr = str.split('').reverse().join('');
 
-const newStr = str.split('').reverse().join('');
+// console.log(str === newStr);
 
-console.log(str === newStr);
+// const newstr1 = newString.split('').reverse().join('');
+// console.log(newString === newstr1);
 
-const newstr1 = newString.split('').reverse().join('');
-console.log(newString === newstr1);
+/*ЗАДАЧА 5
+Напишіть ф-цію calculateAverage() яка приймає довільну 
+кількість аргументів і повертає їх середнє значення.
+Всі аргументи будуть тільки числовими */
 
+console.log(calculateAverage(1, 2, 3, 4)); // 2.5
+console.log(calculateAverage(14, 8, 2)); // 8
+console.log(calculateAverage(27, 43, 2, 8, 36)); // 23.2
 
+function calculateAverage() {
+  console.log(arguments);
+  const arrayNew = Array.from(arguments);
+
+  let total = 0;
+
+  for (let array of arrayNew) {
+    total += array;
+  }
+
+  return (total / arrayNew.length).toFixed(2);
+}
